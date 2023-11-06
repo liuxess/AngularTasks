@@ -1,0 +1,3 @@
+<select [(ngModel)]="selectedPriority" (change)="onSelectionChange(selectedPriority)">
+    <option *ngFor="let priority of taskPriorities" [value]="priority">{{priority}}</option>
+</select>

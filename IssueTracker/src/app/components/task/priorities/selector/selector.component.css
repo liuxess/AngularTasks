@@ -1,0 +1,21 @@
+select {
+  width: 70%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+  font-size: 16px;
+  margin: 5px 0px;
+  margin-left: 5px
+}
+
+/* Style for the option element */
+select option {
+  padding: 2px;
+}
+
+/* Focus styles for the select element */
+select:focus {
+  outline: none;
+  border-color: #6ca6cd;
+  box-shadow: 0 0 5px rgba
+}

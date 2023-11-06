@@ -1,0 +1,9 @@
+<div>
+    <div *ngFor="let task of taskList">
+        <app-card [task]="task" (deletedTaskEvent)="delete($event)">
+        </app-card>
+    </div>
+    <div>
+        <app-new (taskCreatedEvent)="addNewTask($event)"></app-new>
+    </div>
+</div>
