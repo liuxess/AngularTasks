@@ -1,0 +1,38 @@
+
+<div>
+    <h2>Rezervoir Calculator</h2>
+
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="totalVolume">Total Volume:</label>
+            <input type="number" step="any" class="form-control" id="totalVolume" required [(ngModel)]="inputs.totalVolume" name="totalVolume" min="0">
+            <div *ngIf="calculationErrors.volumeError != null" class="error">
+                {{calculationErrors.volumeError}}
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="fillingSpeed">Filling Speed:</label>
+            <input type="number" step="any" class="form-control" id="fillingSpeed" required [(ngModel)]="inputs.fillingSpeed" name="fillingSpeed"  min="0">
+            <div *ngIf="calculationErrors.speedError != null" class="error">
+                {{calculationErrors.speedError}}
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="fillingTime">Filling Time:</label>
+            <input type="number" step="any" class="form-control" id="fillingTime" required [(ngModel)]="inputs.fillingTime" name="fillingTime"  min="0">
+            <div *ngIf="calculationErrors.timeError != null" class="error">
+                {{calculationErrors.timeError}}
+            </div>
+        </div>
+
+        <button type="submit">Calculate fillage</button>
+    </form>
+
+    <div class="result-display" *ngIf="fillResult != null">
+        <p>Result: <span>{{ fillResult }}</span>% will be filled</p>
+    </div>
+
+</div>
+
