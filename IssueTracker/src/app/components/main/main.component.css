@@ -1,0 +1,14 @@
+.container {
+    padding-top: 50px; /* This should be at least the height of your navbar */
+    display: flex;
+  }
+  
+  .list-column {
+    flex: 1; /* Adjust this value to change the width of the list column */
+  }
+  
+  .details-column {
+    flex: 1; /* Adjust this value to change the width of the 'something else box' column */
+    padding-left: 20px; /* Optional: Adds some space between the columns */
+  }
+  

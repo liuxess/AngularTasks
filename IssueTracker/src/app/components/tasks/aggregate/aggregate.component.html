@@ -1,0 +1,8 @@
+<div class="card">
+    <div class="card-header">
+        TOTAL: {{totalAmount}}
+    </div>
+    <div class="card-body">
+        <h5 *ngFor="let taskAmount of taskAmounts | keyvalue" class="card-text">{{taskAmount.key}}: {{taskAmount.value}}</h5>
+    </div>
+</div>

@@ -8,6 +8,11 @@ import { CardComponent } from './components/task/card/card.component';
 import { FormsModule } from '@angular/forms';
 import { TaskSelectorComponent } from './components/task/priorities/selector/selector.component';
 import { NewTaskComponent } from './components/task/new/new.component';
+import { AggregateComponent } from './components/tasks/aggregate/aggregate.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { AppRoutingModule } from './app-routing.module';
+import { AboutComponent } from './components/about/about.component';
+import { ModalComponent } from './components/task/modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -16,11 +21,16 @@ import { NewTaskComponent } from './components/task/new/new.component';
     ListComponent,
     CardComponent,
     TaskSelectorComponent,
-    NewTaskComponent
+    NewTaskComponent,
+    AggregateComponent,
+    NavbarComponent,
+    AboutComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

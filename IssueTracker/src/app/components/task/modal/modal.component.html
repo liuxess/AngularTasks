@@ -1,0 +1,27 @@
+
+<!-- Modal Structure -->
+<div class="modal" [class.show]="isModalOpen">
+  <div class="modal-dialog">
+    <div class="card">
+      <div class="card-header">
+        New Task:
+        <button type="button" class="close" (click)="toggleModal()">&times;</button>
+      </div>
+      <div class="card-body">
+        <form (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label for="totalVolume">Name:</label>
+                <input type="text" class="form-control" required [(ngModel)]="taskName" name="Name">
+            </div>
+    
+            <div class="form-group">
+                <label for="fillingSpeed">Priority:</label>
+                <app-task-selector (selectedPriorityChange)="changePriority($event)"></app-task-selector>
+            </div>
+
+            <button class="save" type="submit">Save</button>
+        </form>
+    </div>
+    </div>
+  </div>
+</div>

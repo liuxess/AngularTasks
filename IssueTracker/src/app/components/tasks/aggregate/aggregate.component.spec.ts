@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NewTaskComponent } from './new.component';
+import { AggregateComponent } from './aggregate.component';
 
-describe('NewComponent', () => {
-  let component: NewTaskComponent;
-  let fixture: ComponentFixture<NewTaskComponent>;
+describe('AggregateComponent', () => {
+  let component: AggregateComponent;
+  let fixture: ComponentFixture<AggregateComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [NewTaskComponent]
+      declarations: [AggregateComponent]
     });
-    fixture = TestBed.createComponent(NewTaskComponent);
+    fixture = TestBed.createComponent(AggregateComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

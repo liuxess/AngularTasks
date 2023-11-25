@@ -10,7 +10,7 @@ import { FormsModule } from '@angular/forms';
 export class TaskSelectorComponent {
   taskPriorities = Object.values(TaskPriority).filter(task => typeof task == 'string');
   @Output() selectedPriorityChange = new EventEmitter<TaskPriority>();
-   selectedPriority: TaskPriority;
+  @Input() selectedPriority: TaskPriority;
 
   constructor() {
     this.selectedPriority = TaskPriority.NONE

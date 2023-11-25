@@ -29,21 +29,3 @@
     margin-bottom: 1rem;
     font-size: 0.9rem;
   }
-  .deletion {
-    padding: 1px;
-    background-color: #131313;
-    color: white;
-    border: solid;
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 0.7em;
-  }
-  .edit{
-    padding: 1px;
-    background-color: #faaafa;
-    color: white;
-    border: solid;
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 0.7em;
-  }
