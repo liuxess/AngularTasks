@@ -1,0 +1,16 @@
+
+<div class="outer-container">
+    <div>
+      <app-dropdown (currencyChange)="onBaseCurrencyChange($event)" name="Base"></app-dropdown>
+    </div>
+    <div>
+      <app-dropdown (currencyChange)="onTargetCurrencyChange($event)" name="Target"></app-dropdown>
+    </div>
+    <div class="exchange-rate">
+      <p>Exchange Rate: 1 {{ baseCurrency }} = {{ exchangeRate ?? 1 }} {{ targetCurrency }}</p>
+    </div>
+    <div *ngIf="errorMessage" class="error-message">
+        {{ errorMessage }}
+      </div>
+  </div>
+  

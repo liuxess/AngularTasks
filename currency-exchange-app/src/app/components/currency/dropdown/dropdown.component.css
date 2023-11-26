@@ -1,0 +1,47 @@
+/* Container styling */
+.dropdown-container {
+    margin: 10px;
+    padding: 10px;
+  }
+  
+  /* Label styling */
+  .dropdown-container label {
+    margin-right: 10px;
+  }
+  
+  /* Dropdown styling */
+  .dropdown-container select {
+    padding: 5px 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    height: 40px;
+    width: 240px;
+    -webkit-appearance: none; /* Removes default chrome and safari style */
+    -moz-appearance: none; /* Removes default style Firefox */
+    appearance: none; /* Remove default arrow */
+    background: url('data:image/svg+xml;utf8,<svg fill="black" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 10px center; /* Custom arrow */
+    background-size: 12px; /* Size of the arrow */
+    cursor: pointer;
+  }
+  
+  /* Change the dropdown when it's focused */
+  .dropdown-container select:focus {
+    outline: none;
+    border-color: #64b5f6;
+  }
+  
+select {
+    padding: 8px 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-right: 4px;
+  }
+  
+  select:hover {
+    border-color: #888;
+  }
+  
+  /* Add additional styles for other elements if necessary */
+  
