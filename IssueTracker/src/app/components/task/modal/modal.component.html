@@ -16,7 +16,7 @@
     
             <div class="form-group">
                 <label for="fillingSpeed">Priority:</label>
-                <app-task-selector (selectedPriorityChange)="changePriority($event)"></app-task-selector>
+                <app-task-selector (selectedPriorityChange)="changePriority($event)" [(selectedPriority)]="taskPriority"></app-task-selector>
             </div>
 
             <button class="save" type="submit">Save</button>

@@ -1,0 +1,72 @@
+<div class="registry-container">
+    <form [formGroup]="registryForm" (ngSubmit)="onSubmit()" *ngIf="isEditMode">
+      <div class="form-group">
+        <label for="firstName">First Name:</label>
+        <input id="firstName" type="text" formControlName="firstName" class="form-control">  
+        <div *ngIf="this.registryForm.get('firstName')?.dirty">
+            <div class="error" *ngIf="registryForm.get('firstName')?.errors?.['required']">First name is required.</div>
+            <div class="error" *ngIf="registryForm.get('firstName')?.errors?.['minlength']">First name must be at least 3 characters.</div>
+            <div class="error" *ngIf="registryForm.get('firstName')?.errors?.['maxlength']">First name cannot be more than 15 characters.</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="lastName">Last Name:</label>
+        <input id="lastName" type="text" formControlName="lastName" class="form-control">  
+        <div *ngIf="this.registryForm.get('lastName')?.dirty">
+            <div class="error" *ngIf="registryForm.get('lastName')?.errors?.['required']">Last name is required.</div>
+            <div class="error" *ngIf="registryForm.get('lastName')?.errors?.['minlength']">Last name must be at least 3 characters.</div>
+            <div class="error" *ngIf="registryForm.get('lastName')?.errors?.['maxlength']">Last name cannot be more than 15 characters.</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="dateOfBirth">Birth Year:</label>
+        <input id="dateOfBirth" type="number" formControlName="dateOfBirth" class="form-control"/>
+        <div *ngIf="this.registryForm.get('dateOfBirth')?.dirty">
+            <div class="error" *ngIf="registryForm.get('dateOfBirth')?.errors?.['required']">Date of birth is required</div>
+            <div class="error" *ngIf="registryForm.get('dateOfBirth')?.errors?.['min']">Child is too old</div>
+            <div class="error" *ngIf="registryForm.get('dateOfBirth')?.errors?.['max']">Child is too young</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input id="email" type="email" formControlName="email" class="form-control">
+        <div *ngIf="this.registryForm.get('email')?.dirty">
+            <div class="error" *ngIf="registryForm.get('email')?.errors?.['required']">Email is required</div>
+            <div class="error" *ngIf="registryForm.get('email')?.errors?.['email']">Unrecognized email</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone:</label>
+        <input id="phone" type="tel" formControlName="phone" class="form-control">
+        <div *ngIf="this.registryForm.get('phone')?.dirty">
+            <div class="error" *ngIf="registryForm.get('phone')?.errors?.['required']">Phone is required</div>
+            <div class="error" *ngIf="registryForm.get('phone')?.errors?.['pattern']">Invalid phone number</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="grade">Grade:</label>
+        <input id="grade" type="number" formControlName="grade" class="form-control">
+        <div *ngIf="this.registryForm.get('grade')?.dirty">
+            <div class="error" *ngIf="registryForm.get('grade')?.errors?.['required']">Grade is required.</div>
+            <div class="error" *ngIf="registryForm.get('grade')?.errors?.['min']">Child is in too low of a grade.</div>
+            <div class="error" *ngIf="registryForm.get('grade')?.errors?.['max']">Grade does not exist</div>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary">Save</button>
+      <button *ngIf="this.registryData" type="button" class="btn btn-secondary" (click)="toggleEditMode()">Cancel</button>
+      <div *ngIf="this.globalError">
+        <h1>{{this.globalError}}</h1>
+      </div>
+    </form>
+  
+      <div class="view-mode" *ngIf="!isEditMode">
+        <div><h3> {{ registryForm.value.firstName }} {{ registryForm.value.lastName }}</h3></div>
+        <div><strong>Birth Year:</strong> {{ registryForm.value.dateOfBirth }}</div>
+        <div><strong>Email:</strong> {{ registryForm.value.email }}</div>
+        <div><strong>Phone:</strong> {{ registryForm.value.phone }}</div>
+        <div><strong>Grade:</strong> {{ registryForm.value.grade }}</div>
+        <button type="button" class="btn btn-primary" (click)="toggleEditMode()">Edit</button>
+        <button type="button" class="btn btn-danger" (click)="delete()">Delete</button>
+      </div>
+  </div>
+  

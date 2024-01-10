@@ -2,14 +2,13 @@ import { Injectable } from '@angular/core';
 import { DataRepositoryService, IStoreable } from '../data-repository.service';
 import { IIssue } from 'src/app/models/issues/issue';
 
-
-
 const dataKey: string = "IssueList";
 
 @Injectable({
   providedIn: 'root'
 })
 export class IssueListService {
+  
   issueList: IIssue[];
 
   constructor(private dataRepository: DataRepositoryService) { 

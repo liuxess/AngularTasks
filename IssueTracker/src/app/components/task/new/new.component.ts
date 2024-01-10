@@ -17,7 +17,6 @@ export class NewTaskComponent {
     }
 
     changePriority(priority: TaskPriority){
-      console.log(priority);
       this.taskPriority = priority;
     }
 

@@ -1,0 +1,10 @@
+
+<div class="app"> 
+    <div> 
+        <h1 class="header"> Children's camp registration</h1>
+    </div>
+    <app-tile  (refreshRequested)="loadRegistryEntries()"></app-tile>
+    <div *ngFor="let registry of registryList">
+        <app-tile [registryData]="registry" (refreshRequested)="loadRegistryEntries()"></app-tile>
+    </div>
+</div>

@@ -22,7 +22,7 @@ export class ModalComponent implements OnInit {
     this.taskId = 0;
     this.taskName = "";
     this.taskPriority = TaskPriority.NONE;
-  }
+  } 
 
   changePriority(priority: TaskPriority){
     console.log(priority);
